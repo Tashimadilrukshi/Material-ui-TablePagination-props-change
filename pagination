@@ -1,0 +1,17 @@
+const PaginationTheme = withStyles({
+  actions: {
+    '& .MuiButtonBase-root:not([disabled])':{
+      color: "red"
+    }   
+  }
+})(TablePagination);
+
+<PaginationTheme 
+  rowsPerPageOptions={[5, 10, 25]}
+  component="div"
+  count={projectList.length ? projectList.length : 0}
+  rowsPerPage={rowsPerPage}
+  page={page}
+  onChangePage={handleChangePage}
+  onChangeRowsPerPage={handleChangeRowsPerPage}
+/>
